@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { BsDownload } from "react-icons/bs";
 const Navbar = () => {
     return (
         <div class="navbar shadow-lg">
@@ -11,7 +12,8 @@ const Navbar = () => {
                 </div>
                 <Link to={'/home'}>RandomUser</Link>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-end">
+                <a href="https://drive.google.com/file/d/19g6PwEG1S0qkQYvXRzx0X8BYiIIZiCv9/view?usp=sharing">Resume <BsDownload className='inline-block' /></a>
             </div>
         </div>
     );
