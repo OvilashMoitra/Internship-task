@@ -14,3 +14,4 @@ You may also see any lint errors in the console.
 * Daisy UI
 * Axios
 * React Router
+* Firebase for hosting
