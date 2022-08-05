@@ -12,7 +12,10 @@ const Home = () => {
         const res = await axios.get("https://randomuser.me/api/");
         setUser(res.data);
     };
-
+    const getNewUser = () => {
+        setUser({})
+        fetchUser()
+    }
     // console.log(user);
     // console.log(user?.results?.[0]);
 
@@ -26,7 +29,7 @@ const Home = () => {
                 <p className='text-black'> <strong>Gender:</strong> {user?.results?.[0]?.gender}</p>
                 <a href={`mailto:${user?.results?.[0]?.email}`} className='text-black'><GrMail className='inline-block h-10' />{user?.results?.[0]?.email}</a>
             </div> : <img className='mx-auto my-7' src={'https://cdn.dribbble.com/users/416315/screenshots/4275501/media/81a14e385dee6f7ca9e90d578b72d2b8.gif'} alt="" />}
-            <button className='btn border-green-600 border-2 border-solid w-32 h-10 rounded-md text-green-600 bg-green-100 my-2' onClick={fetchUser}>Get New User</button>
+            <button className='btn border-green-600 border-2 border-solid w-32 h-10 rounded-md text-green-600 bg-green-100 my-2' onClick={getNewUser}>Get New User</button>
             <Footer />
         </div>
 

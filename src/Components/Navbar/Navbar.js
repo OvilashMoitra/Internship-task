@@ -10,6 +10,7 @@ const Navbar = () => {
                     </label>
                 </div>
                 <a class="btn btn-ghost normal-case text-xl">RandomUser</a>
+
             </div>
             <div class="navbar-center hidden lg:flex">
             </div>
